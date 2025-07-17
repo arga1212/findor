@@ -125,8 +125,6 @@
     <div class="promo">
       signup<br>and get a <br>first free ride!
     </div>
-    <!-- Menambahkan atribut action dan method untuk semantik form yang lebih baik.
-         Perhatikan: onsubmit masih akan mengesampingkan pengiriman form standar. -->
     <form class="form-bg" autocomplete="off" onsubmit="event.preventDefault(); window.location.href='/login';" method="POST" action="/register">
       <label for="name">Name</label>
       <input type="text" id="name" name="name" placeholder="Enter your name" required>

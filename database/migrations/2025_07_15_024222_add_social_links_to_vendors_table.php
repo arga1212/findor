@@ -12,9 +12,18 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('vendors', function (Blueprint $table) {
-            $table->string('instagram')->nullable();
+        if (!Schema::hasColumn('vendors', 'price_range')) {
+            $table->string('price_range')->nullable()->after('thumbnail');
+        }
+        if (!Schema::hasColumn('vendors', 'instagram')) {
+            $table->string('instagram')->nullable()->after('thumbnail');
+        }
+        if (!Schema::hasColumn('vendors', 'tiktok')) {
             $table->string('tiktok')->nullable();
+        }
+        if (!Schema::hasColumn('vendors', 'facebook')) {
             $table->string('facebook')->nullable();
+        }
         });
     }
 

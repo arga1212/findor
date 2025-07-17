@@ -34,4 +34,6 @@ Route::middleware(['auth'])->group(function () {
 });
 
 // Authentication routes
+// Rute-rute seperti /login, /register, /forgot-password, dll.
+// ditangani oleh file auth.php yang disertakan di sini.
 require __DIR__.'/auth.php';
